@@ -269,9 +269,9 @@
     letter-spacing: .5px;
   }
 
-  .enquire-btn {
+  .wa-btn {
     margin-top: 14px;
-    background: var(--green);
+    background: #25D366;
     color: #fff;
     border: none;
     border-radius: 50px;
@@ -282,8 +282,40 @@
     width: 100%;
     letter-spacing: .5px;
     transition: background .2s, transform .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
   }
-  .enquire-btn:hover { background: var(--green-light); transform: scale(1.02); }
+  .wa-btn:hover { background: #1da851; transform: scale(1.02); }
+  .wa-btn svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+
+  /* Floating WhatsApp */
+  .float-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 24px rgba(37,211,102,.45);
+    animation: pulse-wa 2.5s infinite;
+    letter-spacing: .3px;
+  }
+  .float-wa svg { width: 22px; height: 22px; fill: #fff; }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,.45); }
+    50%      { box-shadow: 0 8px 36px rgba(37,211,102,.75); }
+  }
 
   /* ── WHY US ── */
   .why {
@@ -393,8 +425,8 @@
   .form-group textarea { resize: vertical; height: 90px; }
   .submit-btn {
     width: 100%;
-    background: var(--yellow);
-    color: var(--brown);
+    background: #25D366;
+    color: #fff;
     border: none;
     border-radius: 50px;
     padding: 14px;
@@ -402,9 +434,14 @@
     font-weight: 800;
     cursor: pointer;
     letter-spacing: .5px;
-    transition: opacity .2s;
+    transition: background .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
   }
-  .submit-btn:hover { opacity: .88; }
+  .submit-btn:hover { background: #1da851; }
 
   /* ── FOOTER ── */
   footer {
@@ -416,41 +453,7 @@
   }
   footer strong { color: var(--yellow); }
 
-  /* ── MODAL ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.55);
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-overlay.open { display: flex; }
-  .modal {
-    background: #fff;
-    border-radius: 20px;
-    padding: 36px;
-    max-width: 420px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,.3);
-    animation: popIn .3s ease;
-  }
-  @keyframes popIn { from { transform: scale(.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-  .modal .m-icon { font-size: 56px; margin-bottom: 12px; }
-  .modal h4 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--green); margin-bottom: 8px; }
-  .modal p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
-  .modal-close {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 32px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-  }
+  /* modal styles removed */
 </style>
 </head>
 <body>
@@ -513,7 +516,7 @@
           <span class="tag">Daily Use</span>
           <span class="tag">All Ages</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Poovan')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2APoovan%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Poovan</a>
       </div>
     </div>
 
@@ -532,7 +535,7 @@
           <span class="tag">Beta-Carotene</span>
           <span class="tag">Immunity</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Sevvazhai')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2ASevvazhai%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Sevvazhai</a>
       </div>
     </div>
 
@@ -551,7 +554,7 @@
           <span class="tag">Sweet</span>
           <span class="tag">Desserts</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Elaki')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2AElaki%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Elaki</a>
       </div>
     </div>
 
@@ -570,7 +573,7 @@
           <span class="tag">High Potassium</span>
           <span class="tag">Traditional</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Nendhiram')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2ANendhiram%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Nendhiram</a>
       </div>
     </div>
 
@@ -589,7 +592,7 @@
           <span class="tag">Native Variety</span>
           <span class="tag">Ayurvedic</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Nattukai')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2ANattukai%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Nattukai</a>
       </div>
     </div>
 
@@ -608,7 +611,7 @@
           <span class="tag">Thin-Skinned</span>
           <span class="tag">Temple Offering</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Rasthali')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2ARasthali%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Rasthali</a>
       </div>
     </div>
 
@@ -627,7 +630,7 @@
           <span class="tag">Kids Favourite</span>
           <span class="tag">Soft Texture</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Thenvaazhai')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2AThenvaazhai%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Thenvaazhai</a>
       </div>
     </div>
 
@@ -646,7 +649,7 @@
           <span class="tag">Digestive Health</span>
           <span class="tag">Rural Variety</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Sakkai')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2ASakkai%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Sakkai</a>
       </div>
     </div>
 
@@ -665,7 +668,7 @@
           <span class="tag">Firm Flesh</span>
           <span class="tag">Kitchen Staple</span>
         </div>
-        <button class="enquire-btn" onclick="openModal('Kaaivazhai')">📞 Enquire Now</button>
+        <a class="wa-btn" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20ordering%20%2AKaaivazhai%20Banana%2A.%20Please%20let%20me%20know%20the%20availability%20and%20price.%20Thank%20you%21" target="_blank"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us for Kaaivazhai</a>
       </div>
     </div>
 
@@ -748,18 +751,14 @@
     </div>
 
     <div class="enquiry-form">
-      <h4>Send an Enquiry</h4>
+      <h4>💬 Chat With Us on WhatsApp</h4>
       <div class="form-group">
         <label>Your Name</label>
-        <input type="text" placeholder="Enter your name">
-      </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="Enter your phone number">
+        <input type="text" id="f-name" placeholder="Enter your name">
       </div>
       <div class="form-group">
         <label>Banana Variety</label>
-        <select>
+        <select id="f-variety">
           <option value="">Select variety</option>
           <option>Poovan – பூவன்</option>
           <option>Sevvazhai – செவ்வாழை</option>
@@ -774,10 +773,13 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Message / Quantity</label>
-        <textarea placeholder="Tell us your requirement, quantity needed, etc."></textarea>
+        <label>Quantity / Message</label>
+        <textarea id="f-msg" placeholder="E.g. I need 50kg of Poovan banana for weekly supply..."></textarea>
       </div>
-      <button class="submit-btn" onclick="alert('Thank you! We will contact you shortly on 9095613541.')">🍌 Send Enquiry</button>
+      <a class="submit-btn" id="wa-form-btn" href="#" target="_blank" onclick="return buildWALink()">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Send via WhatsApp
+      </a>
     </div>
   </div>
 </section>
@@ -789,28 +791,21 @@
   <p style="margin-top:12px; font-size:12px;">© 2024 Suresh Banana Traders. All rights reserved.</p>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="closeModal(event)">
-  <div class="modal">
-    <div class="m-icon">🍌</div>
-    <h4 id="modal-title">Enquire About Poovan</h4>
-    <p>To place an order or enquire about availability and bulk pricing, please contact us directly.</p>
-    <p><strong style="color:#2d6a2d;font-size:18px;">📞 9095613541</strong><br>
-    <small>WhatsApp / Call — SureshKumar D</small></p>
-    <br>
-    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">Close</button>
-  </div>
-</div>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="float-wa" href="https://wa.me/919095613541?text=Hello%20SureshKumar%20D%2C%20I%20am%20interested%20in%20buying%20bananas%20from%20Suresh%20Banana%20Traders.%20Please%20share%20the%20available%20varieties%20and%20prices.%20Thank%20you!" target="_blank">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Chat on WhatsApp
+</a>
 
 <script>
-  function openModal(variety) {
-    document.getElementById('modal-title').textContent = 'Enquire About ' + variety;
-    document.getElementById('modal').classList.add('open');
-  }
-  function closeModal(e) {
-    if (e.target === document.getElementById('modal')) {
-      document.getElementById('modal').classList.remove('open');
-    }
+  function buildWALink() {
+    var name    = document.getElementById('f-name').value.trim() || 'Customer';
+    var variety = document.getElementById('f-variety').value || 'banana';
+    var msg     = document.getElementById('f-msg').value.trim();
+    var text = 'Hello SureshKumar D,\n\nMy name is ' + name + '.\nI am interested in ordering *' + variety + '*.\n' + (msg ? 'Details: ' + msg + '\n' : '') + '\nPlease share the availability and price. Thank you!';
+    var url = 'https://wa.me/919095613541?text=' + encodeURIComponent(text);
+    document.getElementById('wa-form-btn').href = url;
+    return true;
   }
 </script>
 </body>
