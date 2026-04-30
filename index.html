@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suresh Banana Traders – Cuddalore, Tamil Nadu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #f7c948;
+    --green: #2d6a2d;
+    --green-light: #4a9e3f;
+    --cream: #fffbe8;
+    --brown: #5a3a10;
+    --dark: #1a1a1a;
+    --text: #333;
+    --card-bg: #fff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--green);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar a { color: var(--yellow); text-decoration: none; }
+
+  /* ── HEADER ── */
+  header {
+    background: #fff;
+    border-bottom: 4px solid var(--yellow);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+  .logo-wrap { display: flex; align-items: center; gap: 16px; }
+  .logo-icon {
+    font-size: 48px;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+  }
+  .logo-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--green);
+    line-height: 1.1;
+  }
+  .logo-text p {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  nav { display: flex; gap: 24px; flex-wrap: wrap; }
+  nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  nav a:hover { color: var(--green-light); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #1e4d1e 0%, #3a7d1e 50%, #f7c948 100%);
+    color: #fff;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '🍌';
+    position: absolute;
+    font-size: 220px;
+    opacity: .08;
+    top: -30px;
+    left: -40px;
+    transform: rotate(-20deg);
+  }
+  .hero::after {
+    content: '🍌';
+    position: absolute;
+    font-size: 180px;
+    opacity: .08;
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(20deg);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--brown);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+  .hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 7vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 12px rgba(0,0,0,.2);
+  }
+  .hero p {
+    font-size: 18px;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    opacity: .9;
+    font-weight: 300;
+  }
+  .hero-cta {
+    background: var(--yellow);
+    color: var(--brown);
+    border: none;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.2);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.25); }
+
+  /* ── SECTION ── */
+  .section-head {
+    text-align: center;
+    padding: 60px 40px 32px;
+  }
+  .section-head h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--green);
+  }
+  .section-head p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: var(--yellow);
+    border-radius: 4px;
+    margin: 14px auto 0;
+  }
+
+  /* ── VARIETIES GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 70px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,.07);
+    transition: transform .25s, box-shadow .25s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0,0,0,.14);
+  }
+
+  .card-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    position: relative;
+  }
+
+  /* unique backgrounds per variety */
+  .card[data-variety="poovan"] .card-img     { background: linear-gradient(135deg, #fff9c4, #ffd54f); }
+  .card[data-variety="sevvazhai"] .card-img  { background: linear-gradient(135deg, #ffcdd2, #ef9a9a); }
+  .card[data-variety="elaki"] .card-img      { background: linear-gradient(135deg, #dcedc8, #aed581); }
+  .card[data-variety="nendhiram"] .card-img  { background: linear-gradient(135deg, #ffe0b2, #ffb74d); }
+  .card[data-variety="nattukai"] .card-img   { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
+  .card[data-variety="rasthali"] .card-img   { background: linear-gradient(135deg, #fff8e1, #ffe082); }
+  .card[data-variety="thenvaazhai"] .card-img{ background: linear-gradient(135deg, #e8f5e9, #66bb6a); }
+  .card[data-variety="sakkai"] .card-img     { background: linear-gradient(135deg, #fbe9e7, #ff8a65); }
+  .card[data-variety="kaaivazhai"] .card-img { background: linear-gradient(135deg, #e1f5fe, #4fc3f7); }
+
+  .badge-fresh {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--green);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+  }
+
+  .card-body { padding: 22px 24px 28px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+  .card-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--green);
+  }
+  .tamil-name {
+    font-size: 15px;
+    color: var(--brown);
+    font-weight: 700;
+    opacity: .8;
+  }
+  .card-body p {
+    font-size: 13.5px;
+    color: #666;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag {
+    background: var(--cream);
+    border: 1px solid #e0d8a0;
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  .enquire-btn {
+    margin-top: 14px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: .5px;
+    transition: background .2s, transform .15s;
+  }
+  .enquire-btn:hover { background: var(--green-light); transform: scale(1.02); }
+
+  /* ── WHY US ── */
+  .why {
+    background: var(--green);
+    color: #fff;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .why h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  .why p.sub { font-size: 15px; opacity: .8; margin-bottom: 40px; }
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .feat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 180px;
+  }
+  .feat-icon { font-size: 40px; }
+  .feat h5 { font-size: 15px; font-weight: 700; letter-spacing: .3px; }
+  .feat p { font-size: 13px; opacity: .75; line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .grid { padding: 0 16px 60px; }
+    header, .topbar, .hero, .section-head, .why, .contact-section { padding-left: 16px; padding-right: 16px; }
+  }
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--green);
+    margin-bottom: 24px;
+  }
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .contact-icon {
+    font-size: 24px;
+    min-width: 32px;
+    text-align: center;
+  }
+  .contact-row strong { display: block; font-size: 13px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
+  .contact-row span, .contact-row a {
+    font-size: 16px;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-row a:hover { color: var(--green-light); }
+
+  .enquiry-form {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  }
+  .enquiry-form h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 700; color: #555; margin-bottom: 6px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: var(--dark);
+    outline: none;
+    transition: border-color .2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--green-light); }
+  .form-group textarea { resize: vertical; height: 90px; }
+  .submit-btn {
+    width: 100%;
+    background: var(--yellow);
+    color: var(--brown);
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: .5px;
+    transition: opacity .2s;
+  }
+  .submit-btn:hover { opacity: .88; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: #aaa;
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer strong { color: var(--yellow); }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    animation: popIn .3s ease;
+  }
+  @keyframes popIn { from { transform: scale(.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .modal .m-icon { font-size: 56px; margin-bottom: 12px; }
+  .modal h4 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--green); margin-bottom: 8px; }
+  .modal p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+  .modal-close {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📍 Cuddalore District, Tamil Nadu</span>
+  <span>
+    📞 <a href="tel:9095613541">9095613541</a> &nbsp;|&nbsp;
+    ✉️ <a href="mailto:sureshbananatraders@gmail.com">sureshbananatraders@gmail.com</a>
+  </span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">🍌</div>
+    <div class="logo-text">
+      <h1>Suresh Banana Traders</h1>
+      <p>Cuddalore District · Tamil Nadu · Est. Since Years</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#varieties">Varieties</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🌿 Farm Fresh · Direct from Growers</div>
+  <h2>Pure Tamil Nadu<br>Banana Varieties</h2>
+  <p>Sourced fresh from Cuddalore District's finest farms. Traditional varieties grown with love and care.</p>
+  <button class="hero-cta" onclick="document.getElementById('varieties').scrollIntoView({behavior:'smooth'})">Explore All Varieties</button>
+</section>
+
+<!-- VARIETIES -->
+<section id="varieties">
+  <div class="section-head">
+    <h3>Our Banana Varieties</h3>
+    <p>9 traditional Tamil Nadu banana varieties — fresh, farm-sourced, and full of nutrition.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1. POOVAN -->
+    <div class="card" data-variety="poovan">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">பூவன் வாழை</div>
+        <h4>Poovan</h4>
+        <p>One of the most popular varieties in Tamil Nadu. Mildly sweet with a slightly tangy taste. Excellent for daily consumption and ideal for infants and elders.</p>
+        <div class="tags">
+          <span class="tag">Rich in Iron</span>
+          <span class="tag">Daily Use</span>
+          <span class="tag">All Ages</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Poovan')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 2. SEVVAZHAI -->
+    <div class="card" data-variety="sevvazhai">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">செவ்வாழை</div>
+        <h4>Sevvazhai</h4>
+        <p>The red banana variety known for its deep reddish-purple peel. High in beta-carotene and antioxidants. Creamy, sweet flesh with a unique flavour profile.</p>
+        <div class="tags">
+          <span class="tag">Antioxidant</span>
+          <span class="tag">Beta-Carotene</span>
+          <span class="tag">Immunity</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Sevvazhai')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 3. ELAKI -->
+    <div class="card" data-variety="elaki">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">ஏலக்கி வாழை</div>
+        <h4>Elaki</h4>
+        <p>A small and fragrant variety with a distinct cardamom-like aroma. Highly sought after for its pleasant sweetness and aromatic taste. Great for desserts.</p>
+        <div class="tags">
+          <span class="tag">Aromatic</span>
+          <span class="tag">Sweet</span>
+          <span class="tag">Desserts</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Elaki')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 4. NENDHIRAM -->
+    <div class="card" data-variety="nendhiram">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">நேந்திரம் வாழை</div>
+        <h4>Nendhiram</h4>
+        <p>A firm, large banana ideal for cooking. Used in traditional Kerala and Tamil dishes like chips, halwa, and aviyal. Rich in potassium and dietary fibre.</p>
+        <div class="tags">
+          <span class="tag">Cooking Banana</span>
+          <span class="tag">High Potassium</span>
+          <span class="tag">Traditional</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Nendhiram')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 5. NATTUKAI -->
+    <div class="card" data-variety="nattukai">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">நாட்டுக்காய் வாழை</div>
+        <h4>Nattukai</h4>
+        <p>A native country variety prized for its medicinal properties. Often used in traditional rituals and Ayurvedic practices. Dense, starchy, and nutritious.</p>
+        <div class="tags">
+          <span class="tag">Medicinal</span>
+          <span class="tag">Native Variety</span>
+          <span class="tag">Ayurvedic</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Nattukai')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 6. RASTHALI -->
+    <div class="card" data-variety="rasthali">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">ரஸ்தாளி வாழை</div>
+        <h4>Rasthali</h4>
+        <p>A premium thin-skinned variety with a delicious custard-like taste. Known as the "Queen of Bananas". Very popular for offerings in temples and gifting.</p>
+        <div class="tags">
+          <span class="tag">Premium</span>
+          <span class="tag">Thin-Skinned</span>
+          <span class="tag">Temple Offering</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Rasthali')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 7. THENVAAZHAI -->
+    <div class="card" data-variety="thenvaazhai">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">தேன்வாழை</div>
+        <h4>Thenvaazhai</h4>
+        <p>Meaning "Honey Banana" — this variety is naturally sweet as honey. Soft texture, golden yellow peel, and a rich flavour that kids and elders absolutely love.</p>
+        <div class="tags">
+          <span class="tag">Honey-Sweet</span>
+          <span class="tag">Kids Favourite</span>
+          <span class="tag">Soft Texture</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Thenvaazhai')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 8. SAKKAI -->
+    <div class="card" data-variety="sakkai">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">சக்கை வாழை</div>
+        <h4>Sakkai</h4>
+        <p>A robust and fibrous variety traditionally grown in rural Tamil Nadu. High in fibre and great for digestive health. Often dried or processed for snacks.</p>
+        <div class="tags">
+          <span class="tag">High Fibre</span>
+          <span class="tag">Digestive Health</span>
+          <span class="tag">Rural Variety</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Sakkai')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+    <!-- 9. KAAIVAZHAI -->
+    <div class="card" data-variety="kaaivazhai">
+      <div class="card-img">
+        🍌
+        <span class="badge-fresh">Fresh</span>
+      </div>
+      <div class="card-body">
+        <div class="tamil-name">காய்வாழை</div>
+        <h4>Kaaivazhai</h4>
+        <p>A green cooking banana variety that remains firm even when ripe. Ideal for curries, stir-fries, and traditional Tamil kootu dishes. A kitchen staple.</p>
+        <div class="tags">
+          <span class="tag">Cooking Use</span>
+          <span class="tag">Firm Flesh</span>
+          <span class="tag">Kitchen Staple</span>
+        </div>
+        <button class="enquire-btn" onclick="openModal('Kaaivazhai')">📞 Enquire Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="why">
+  <h3>Why Choose Suresh Banana Traders?</h3>
+  <p class="sub">Trusted by families and businesses across Cuddalore District</p>
+  <div class="features">
+    <div class="feat">
+      <div class="feat-icon">🌱</div>
+      <h5>Farm Fresh</h5>
+      <p>Directly sourced from farmers in Tamil Nadu</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🍃</div>
+      <h5>9 Varieties</h5>
+      <p>Traditional native varieties preserved with care</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🚚</div>
+      <h5>Bulk Supply</h5>
+      <p>Reliable wholesale and retail supply available</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🤝</div>
+      <h5>Trusted Trader</h5>
+      <p>Years of experience in banana trading business</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📍</div>
+      <h5>Local Roots</h5>
+      <p>Proudly based in Cuddalore, Tamil Nadu</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-head" style="padding-top:0">
+    <h3>Get In Touch</h3>
+    <p>We welcome bulk orders, wholesale inquiries, and direct purchases.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact Details</h3>
+
+      <div class="contact-row">
+        <div class="contact-icon">👤</div>
+        <div>
+          <strong>Proprietor</strong>
+          <span>SureshKumar D</span>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">📞</div>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:9095613541">9095613541</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:sureshbananatraders@gmail.com">sureshbananatraders@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">📍</div>
+        <div>
+          <strong>Location</strong>
+          <span>Cuddalore District, Tamil Nadu, India</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="enquiry-form">
+      <h4>Send an Enquiry</h4>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number">
+      </div>
+      <div class="form-group">
+        <label>Banana Variety</label>
+        <select>
+          <option value="">Select variety</option>
+          <option>Poovan – பூவன்</option>
+          <option>Sevvazhai – செவ்வாழை</option>
+          <option>Elaki – ஏலக்கி</option>
+          <option>Nendhiram – நேந்திரம்</option>
+          <option>Nattukai – நாட்டுக்காய்</option>
+          <option>Rasthali – ரஸ்தாளி</option>
+          <option>Thenvaazhai – தேன்வாழை</option>
+          <option>Sakkai – சக்கை</option>
+          <option>Kaaivazhai – காய்வாழை</option>
+          <option>Multiple Varieties</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Quantity</label>
+        <textarea placeholder="Tell us your requirement, quantity needed, etc."></textarea>
+      </div>
+      <button class="submit-btn" onclick="alert('Thank you! We will contact you shortly on 9095613541.')">🍌 Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>🍌 <strong>Suresh Banana Traders</strong> · Cuddalore District, Tamil Nadu</p>
+  <p style="margin-top:8px;">📞 9095613541 &nbsp;|&nbsp; ✉️ sureshbananatraders@gmail.com</p>
+  <p style="margin-top:12px; font-size:12px;">© 2024 Suresh Banana Traders. All rights reserved.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="m-icon">🍌</div>
+    <h4 id="modal-title">Enquire About Poovan</h4>
+    <p>To place an order or enquire about availability and bulk pricing, please contact us directly.</p>
+    <p><strong style="color:#2d6a2d;font-size:18px;">📞 9095613541</strong><br>
+    <small>WhatsApp / Call — SureshKumar D</small></p>
+    <br>
+    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">Close</button>
+  </div>
+</div>
+
+<script>
+  function openModal(variety) {
+    document.getElementById('modal-title').textContent = 'Enquire About ' + variety;
+    document.getElementById('modal').classList.add('open');
+  }
+  function closeModal(e) {
+    if (e.target === document.getElementById('modal')) {
+      document.getElementById('modal').classList.remove('open');
+    }
+  }
+</script>
+</body>
+</html>
