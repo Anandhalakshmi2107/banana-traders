@@ -1,425 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Suresh Banana Traders in Cuddalore, Tamil Nadu. Contact us for wholesale banana varieties, bulk orders, availability and current prices.">
-  <meta name="theme-color" content="#174b32">
-  <title>Suresh Banana Traders | Wholesale Bananas in Cuddalore</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--green:#174b32;--green2:#236b43;--lime:#d8ef83;--cream:#fbfaf4;--ink:#17251c;--muted:#647168;--line:#e5e9df;--white:#fff;--wa:#16864a;--shadow:0 18px 55px rgba(22,54,35,.10)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:95px}
-    body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-    .wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
-    .topline{background:var(--green);color:#eaf3e8;font-size:13px}
-    .topline .wrap{display:flex;justify-content:space-between;gap:14px;padding:9px 0;flex-wrap:wrap}
-    .topline a{color:#fff;font-weight:700}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0}
-    .brand-mark{width:48px;height:48px;display:grid;place-items:center;background:var(--lime);border-radius:16px;font-size:27px;flex-shrink:0}
-    .brand h1{font:800 19px/1.15 Manrope,sans-serif;color:var(--green);letter-spacing:-.5px}
-    .brand p{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-    nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
-    nav a:not(.btn):hover{color:var(--green2)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;font-weight:800;font-size:14px;transition:transform .2s,background .2s;cursor:pointer;border:0}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--lime);color:var(--green)}
-    .btn-green{background:var(--green);color:#fff}
-    .btn-green:hover{background:var(--green2)}
-    .hero{padding:62px 0 70px;background:radial-gradient(circle at 85% 15%,rgba(216,239,131,.23),transparent 26%),linear-gradient(135deg,#f6f8ed,#fffdf7)}
-    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#eaf3d8;color:var(--green);padding:7px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
-    .eyebrow span{width:7px;height:7px;background:#63a447;border-radius:50%}
-    .hero h2{font:800 clamp(38px,5vw,64px)/1.08 Manrope,sans-serif;letter-spacing:-2.7px;color:var(--green);margin:22px 0 20px}
-    .hero h2 em{font-style:normal;color:#7c9d35}
-    .hero-copy{font-size:17px;max-width:530px;color:#536258;margin-bottom:28px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-note{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:13px;font-weight:600}
-    .hero-note span{display:flex;align-items:center;gap:7px}
-    .hero-visual{position:relative;min-height:430px}
-    .hero-photo{position:absolute;inset:0 24px 28px 0;width:calc(100% - 24px);height:calc(100% - 28px);object-fit:cover;border-radius:32px 32px 100px 32px;box-shadow:var(--shadow);background:#e6edd8}
-    .photo-label{position:absolute;right:0;bottom:0;background:#fff;padding:18px 21px;border-radius:18px;box-shadow:var(--shadow);max-width:245px}
-    .photo-label strong{display:block;color:var(--green);font:800 16px Manrope,sans-serif}
-    .photo-label small{color:var(--muted);font-size:12px}
-    .trust-strip{background:#fff;border-block:1px solid var(--line)}
-    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0}
-    .trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:5px 18px;border-right:1px solid var(--line)}
-    .trust-item:last-child{border:0}
-    .trust-icon{width:42px;height:42px;border-radius:14px;background:#eff5e4;display:grid;place-items:center;font-size:21px}
-    .trust-item strong{display:block;font:800 14px Manrope,sans-serif}
-    .trust-item small{color:var(--muted);font-size:12px}
-    section{scroll-margin-top:95px}
-    .section{padding:78px 0}
-    .section-heading{text-align:center;max-width:670px;margin:0 auto 34px}
-    .section-heading .eyebrow{margin-bottom:14px}
-    .section-heading h2{font:800 clamp(29px,4vw,42px)/1.15 Manrope,sans-serif;letter-spacing:-1.2px;color:var(--green)}
-    .section-heading p{color:var(--muted);margin-top:12px}
-    .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-    .product{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-    .product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .product-image{height:205px;position:relative;overflow:hidden;background:#edf1e2}
-    .product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-    .product:hover .product-image img{transform:scale(1.04)}
-    .product-image .number{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.92);color:var(--green);font-size:11px;font-weight:800;border-radius:999px;padding:6px 10px}
-    .product-body{padding:20px;display:flex;flex-direction:column;flex:1}
-    .tamil{color:#7a8a42;font-weight:700;font-size:13px}
-    .product h3{font:800 21px Manrope,sans-serif;color:var(--green);margin:3px 0 8px}
-    .product p{font-size:13px;color:var(--muted);flex:1}
-    .product .btn{width:100%;margin-top:18px;padding:11px 14px;font-size:13px}
-    .wholesale-band{background:var(--green);color:#fff;padding:48px 0}
-    .wholesale-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .wholesale-inner h2{font:800 clamp(25px,3.5vw,36px)/1.2 Manrope,sans-serif;letter-spacing:-.8px}
-    .wholesale-inner p{color:#d7e5d8;margin-top:9px;max-width:650px;font-size:14px}
-    .wholesale-inner .btn{flex-shrink:0}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .step{padding:25px;background:#fff;border:1px solid var(--line);border-radius:20px}
-    .step-num{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:var(--lime);color:var(--green);font:800 16px Manrope,sans-serif;margin-bottom:17px}
-    .step h3{font:800 17px Manrope,sans-serif;color:var(--green);margin-bottom:7px}
-    .step p{font-size:13px;color:var(--muted)}
-    .contact-section{background:#f0f4e8}
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}
-    .contact-copy h2{font:800 clamp(30px,4vw,42px)/1.15 Manrope,sans-serif;color:var(--green);letter-spacing:-1.2px;margin:12px 0}
-    .contact-copy>p{color:var(--muted);margin-bottom:25px}
-    .contact-list{display:grid;gap:15px}
-    .contact-row{display:flex;gap:13px;align-items:flex-start}
-    .contact-row .ico{width:42px;height:42px;border-radius:13px;background:#fff;display:grid;place-items:center;font-size:19px;flex-shrink:0}
-    .contact-row strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
-    .contact-row span,.contact-row a{font-weight:700;color:var(--ink);overflow-wrap:anywhere}
-    .form-card{background:#fff;padding:28px;border-radius:24px;box-shadow:var(--shadow)}
-    .form-card h3{font:800 22px Manrope,sans-serif;color:var(--green)}
-    .form-card>p{font-size:13px;color:var(--muted);margin:6px 0 22px}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-    .field{display:flex;flex-direction:column;gap:6px}
-    .field.full{grid-column:1/-1}
-    label{font-size:12px;font-weight:800;color:#39483e}
-    input,select,textarea{width:100%;font:500 14px "DM Sans",sans-serif;color:var(--ink);border:1px solid #dce3d9;border-radius:12px;padding:12px 13px;background:#fff;outline:none}
-    input:focus,select:focus,textarea:focus{border-color:#75a44c;box-shadow:0 0 0 3px rgba(117,164,76,.14)}
-    textarea{min-height:90px;resize:vertical}
-    .form-card .btn{width:100%;margin-top:17px}
-    .form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px}
-    footer{background:#102f21;color:#d2dfd4;padding:28px 0}
-    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
-    .footer-inner strong{color:#fff}
-    .float-wa{position:fixed;right:20px;bottom:20px;z-index:30;box-shadow:0 8px 25px rgba(0,0,0,.18);border:2px solid white}
-    @media(max-width:900px){.hero-grid{gap:28px}.hero-visual{min-height:360px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{gap:25px}}
-    @media(max-width:680px){
-      .wrap{width:min(100% - 28px,560px)}
-      .topline .wrap{justify-content:center;text-align:center;font-size:12px}
-      .nav{min-height:72px;flex-wrap:wrap;padding:12px 0;gap:12px}
-      .brand-mark{width:42px;height:42px;border-radius:13px}.brand h1{font-size:16px}.brand p{font-size:9px;letter-spacing:1px}
-      nav{width:100%;justify-content:space-between;gap:10px;padding:5px 0 3px;font-size:12px}
-      nav .nav-cta{padding:9px 12px}
-      .hero{padding:42px 0 48px}.hero-grid{grid-template-columns:1fr;gap:28px}
-      .hero h2{letter-spacing:-1.6px;font-size:clamp(37px,11vw,52px)}
-      .hero-copy{font-size:15px}.hero-visual{min-height:290px}
-      .hero-photo{border-radius:24px 24px 70px 24px}
-      .photo-label{padding:12px 14px;max-width:205px}.photo-label strong{font-size:14px}
-      .trust-grid{grid-template-columns:1fr;padding:8px 0}.trust-item{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--line);padding:12px 4px}.trust-item:last-child{border-bottom:0}
-      .section{padding:55px 0}.section-heading{margin-bottom:25px}.product-grid{grid-template-columns:1fr;gap:15px}
-      .product{display:grid;grid-template-columns:40% 60%;border-radius:18px}
-      .product-image{height:100%;min-height:210px}
-      .product-body{padding:15px;min-width:0}.product h3{font-size:18px}.product p{font-size:12px}
-      .product .btn{padding:9px 8px;font-size:11px;margin-top:12px}
-      .wholesale-band{padding:35px 0}.wholesale-inner{align-items:flex-start;flex-direction:column;gap:20px}
-      .steps{grid-template-columns:1fr;gap:12px}.step{padding:20px}
-      .contact-grid{grid-template-columns:1fr;gap:30px}.form-card{padding:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
-      .float-wa{right:12px;bottom:12px;padding:12px 15px;font-size:12px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Suresh Banana Traders in Cuddalore, Tamil Nadu. Contact us for wholesale banana varieties, bulk orders, availability and current prices.">
+<meta name="theme-color" content="#174b32">
+<title>Suresh Banana Traders | Wholesale Bananas in Cuddalore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#174b32;--green2:#236b43;--lime:#d8ef83;--cream:#fbfaf4;--ink:#17251c;--muted:#647168;--line:#e5e9df;--white:#fff;--wa:#16864a;--shadow:0 18px 55px rgba(22,54,35,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+.topline{background:var(--green);color:#eaf3e8;font-size:13px}
+.topline .wrap{display:flex;justify-content:space-between;gap:14px;padding:9px 0;flex-wrap:wrap}
+.topline a{color:#fff;font-weight:700}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{width:48px;height:48px;display:grid;place-items:center;background:var(--lime);border-radius:16px;font-size:27px;flex-shrink:0}
+.brand h1{font:800 19px/1.15 Manrope,sans-serif;color:var(--green);letter-spacing:-.5px}
+.brand p{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
+nav a:not(.btn):hover{color:var(--green2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;font-weight:800;font-size:14px;transition:transform .2s,background .2s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--lime);color:var(--green)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green2)}
+.hero{padding:62px 0 70px;background:radial-gradient(circle at 85% 15%,rgba(216,239,131,.23),transparent 26%),linear-gradient(135deg,#f6f8ed,#fffdf7)}
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#eaf3d8;color:var(--green);padding:7px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.eyebrow span{width:7px;height:7px;background:#63a447;border-radius:50%}
+.hero h2{font:800 clamp(38px,5vw,64px)/1.08 Manrope,sans-serif;letter-spacing:-2.7px;color:var(--green);margin:22px 0 20px}
+.hero h2 em{font-style:normal;color:#7c9d35}
+.hero-copy{font-size:17px;max-width:530px;color:#536258;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:13px;font-weight:600}
+.hero-note span{display:flex;align-items:center;gap:7px}
+.hero-visual{position:relative;min-height:430px}
+.hero-photo{position:absolute;inset:0 24px 28px 0;width:calc(100% - 24px);height:calc(100% - 28px);object-fit:cover;border-radius:32px 32px 100px 32px;box-shadow:var(--shadow);background:#e6edd8}
+.photo-label{position:absolute;right:0;bottom:0;background:#fff;padding:18px 21px;border-radius:18px;box-shadow:var(--shadow);max-width:245px}
+.photo-label strong{display:block;color:var(--green);font:800 16px Manrope,sans-serif}
+.photo-label small{color:var(--muted);font-size:12px}
+.trust-strip{background:#fff;border-block:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;padding:5px 18px;border-right:1px solid var(--line)}
+.trust-item:last-child{border:0}
+.trust-icon{width:42px;height:42px;border-radius:14px;background:#eff5e4;display:grid;place-items:center;font-size:21px}
+.trust-item strong{display:block;font:800 14px Manrope,sans-serif}
+.trust-item small{color:var(--muted);font-size:12px}
+section{scroll-margin-top:95px}
+.section{padding:78px 0}
+.section-heading{text-align:center;max-width:670px;margin:0 auto 34px}
+.section-heading .eyebrow{margin-bottom:14px}
+.section-heading h2{font:800 clamp(29px,4vw,42px)/1.15 Manrope,sans-serif;letter-spacing:-1.2px;color:var(--green)}
+.section-heading p{color:var(--muted);margin-top:12px}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.product{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.product-image{height:205px;position:relative;overflow:hidden;background:#edf1e2}
+.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.product:hover .product-image img{transform:scale(1.04)}
+.product-image .number{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.92);color:var(--green);font-size:11px;font-weight:800;border-radius:999px;padding:6px 10px}
+.product-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.tamil{color:#7a8a42;font-weight:700;font-size:13px}
+.product h3{font:800 21px Manrope,sans-serif;color:var(--green);margin:3px 0 8px}
+.product p{font-size:13px;color:var(--muted);flex:1}
+.product .btn{width:100%;margin-top:18px;padding:11px 14px;font-size:13px}
+.wholesale-band{background:var(--green);color:#fff;padding:48px 0}
+.wholesale-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.wholesale-inner h2{font:800 clamp(25px,3.5vw,36px)/1.2 Manrope,sans-serif;letter-spacing:-.8px}
+.wholesale-inner p{color:#d7e5d8;margin-top:9px;max-width:650px;font-size:14px}
+.wholesale-inner .btn{flex-shrink:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{padding:25px;background:#fff;border:1px solid var(--line);border-radius:20px}
+.step-num{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:var(--lime);color:var(--green);font:800 16px Manrope,sans-serif;margin-bottom:17px}
+.step h3{font:800 17px Manrope,sans-serif;color:var(--green);margin-bottom:7px}
+.step p{font-size:13px;color:var(--muted)}
+.contact-section{background:#f0f4e8}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}
+.contact-copy h2{font:800 clamp(30px,4vw,42px)/1.15 Manrope,sans-serif;color:var(--green);letter-spacing:-1.2px;margin:12px 0}
+.contact-copy>p{color:var(--muted);margin-bottom:25px}
+.contact-list{display:grid;gap:15px}
+.contact-row{display:flex;gap:13px;align-items:flex-start}
+.contact-row .ico{width:42px;height:42px;border-radius:13px;background:#fff;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.contact-row strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
+.contact-row span,.contact-row a{font-weight:700;color:var(--ink);overflow-wrap:anywhere}
+.form-card{background:#fff;padding:28px;border-radius:24px;box-shadow:var(--shadow)}
+.form-card h3{font:800 22px Manrope,sans-serif;color:var(--green)}
+.form-card>p{font-size:13px;color:var(--muted);margin:6px 0 22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:12px;font-weight:800;color:#39483e}
+input,select,textarea{width:100%;font:500 14px "DM Sans",sans-serif;color:var(--ink);border:1px solid #dce3d9;border-radius:12px;padding:12px 13px;background:#fff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#75a44c;box-shadow:0 0 0 3px rgba(117,164,76,.14)}
+textarea{min-height:90px;resize:vertical}
+.form-card .btn{width:100%;margin-top:17px}
+.form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px}
+footer{background:#102f21;color:#d2dfd4;padding:28px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
+.footer-inner strong{color:#fff}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:30;box-shadow:0 8px 25px rgba(0,0,0,.18);border:2px solid white}
+@media(max-width:900px){.hero-grid{gap:28px}.hero-visual{min-height:360px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{gap:25px}}
+@media(max-width:680px){
+.wrap{width:min(100% - 28px,560px)}
+.topline .wrap{justify-content:center;text-align:center;font-size:12px}
+.nav{min-height:72px;flex-wrap:wrap;padding:12px 0;gap:12px}
+.brand-mark{width:42px;height:42px;border-radius:13px}.brand h1{font-size:16px}.brand p{font-size:9px;letter-spacing:1px}
+nav{width:100%;justify-content:space-between;gap:10px;padding:5px 0 3px;font-size:12px}
+nav .nav-cta{padding:9px 12px}
+.hero{padding:42px 0 48px}.hero-grid{grid-template-columns:1fr;gap:28px}
+.hero h2{letter-spacing:-1.6px;font-size:clamp(37px,11vw,52px)}
+.hero-copy{font-size:15px}.hero-visual{min-height:290px}
+.hero-photo{border-radius:24px 24px 70px 24px}
+.photo-label{padding:12px 14px;max-width:205px}.photo-label strong{font-size:14px}
+.trust-grid{grid-template-columns:1fr;padding:8px 0}.trust-item{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--line);padding:12px 4px}.trust-item:last-child{border-bottom:0}
+.section{padding:55px 0}.section-heading{margin-bottom:25px}.product-grid{grid-template-columns:1fr;gap:15px}
+.product{display:grid;grid-template-columns:40% 60%;border-radius:18px}
+.product-image{height:100%;min-height:210px}
+.product-body{padding:15px;min-width:0}.product h3{font-size:18px}.product p{font-size:12px}
+.product .btn{padding:9px 8px;font-size:11px;margin-top:12px}
+.wholesale-band{padding:35px 0}.wholesale-inner{align-items:flex-start;flex-direction:column;gap:20px}
+.steps{grid-template-columns:1fr;gap:12px}.step{padding:20px}
+.contact-grid{grid-template-columns:1fr;gap:30px}.form-card{padding:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+.float-wa{right:12px;bottom:12px;padding:12px 15px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
-  <div class="topline">
-    <div class="wrap">
-      <span>📍 Cuddalore District, Tamil Nadu</span>
-      <span>Call us: <a href="tel:+919095613541">+91 90956 13541</a> &nbsp;·&nbsp; <a href="mailto:sureshbananatraders@gmail.com">Email us</a></span>
-    </div>
-  </div>
 
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="Suresh Banana Traders home">
-        <div class="brand-mark" aria-hidden="true">🍌</div>
-        <div><h1>Suresh Banana Traders</h1><p>Wholesale Banana Supply</p></div>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#varieties">Varieties</a>
-        <a href="#how-to-order">How to order</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-green nav-cta" href="#contact">Request a quote ↗</a>
-      </nav>
-    </div>
-  </header>
+<div class="topline">
+<div class="wrap">
+<span>📍 Cuddalore District, Tamil Nadu</span>
+<span>Call us: <a href="tel:+919095613541">+91 90956 13541</a> &nbsp;·&nbsp; <a href="mailto:sureshbananatraders@gmail.com">Email us</a></span>
+</div>
+</div>
 
-  <main id="home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow"><span></span> Your local banana trading partner</div>
-          <h2>Fresh banana varieties.<br><em>Wholesale made simple.</em></h2>
-          <p class="hero-copy">Looking for banana supply for your shop, fruit stall or business? Connect with Suresh Banana Traders in Cuddalore to ask about available varieties, bulk quantities and current prices.</p>
-          <div class="hero-actions">
-            <a class="btn btn-green" href="#varieties">Explore varieties <span aria-hidden="true">→</span></a>
-            <a class="btn btn-primary" href="https://wa.me/919095613541?text=Hello%20Suresh%20Banana%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20wholesale%20banana%20prices%20and%20availability." target="_blank" rel="noopener">WhatsApp for prices</a>
-          </div>
-          <div class="hero-note">
-            <span>✓ Multiple local varieties</span>
-            <span>✓ Bulk-order enquiries</span>
-            <span>✓ Cuddalore, Tamil Nadu</span>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img class="hero-photo" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=1100&q=85" alt="Fresh bunches of yellow bananas" fetchpriority="high">
-          <div class="photo-label"><strong>Need a wholesale quote?</strong><small>Ask us about today's availability and pricing.</small></div>
-        </div>
-      </div>
-    </section>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#home" aria-label="Suresh Banana Traders home">
+<div class="brand-mark" aria-hidden="true">🍌</div>
+<div><h1>Suresh Banana Traders</h1><p>Wholesale Banana Supply</p></div>
+</a>
+<nav aria-label="Main navigation">
+<a href="#varieties">Varieties</a>
+<a href="#how-to-order">How to order</a>
+<a href="#contact">Contact</a>
+<a class="btn btn-green nav-cta" href="#contact">Request a quote ↗</a>
+</nav>
+</div>
+</header>
 
-    <div class="trust-strip">
-      <div class="wrap trust-grid">
-        <div class="trust-item"><div class="trust-icon">🌿</div><div><strong>Variety selection</strong><small>Traditional banana varieties</small></div></div>
-        <div class="trust-item"><div class="trust-icon">📦</div><div><strong>Bulk enquiries welcome</strong><small>Share your required quantity</small></div></div>
-        <div class="trust-item"><div class="trust-icon">🤝</div><div><strong>Direct communication</strong><small>Speak with the trader</small></div></div>
-      </div>
-    </div>
+<main id="home">
 
-    <section class="section" id="varieties">
-  <div class="wrap">
-    <div class="section-heading">
-      <div class="eyebrow"><span></span> Our selection</div>
-      <h2>Explore our banana varieties</h2>
-      <p>Choose a variety and message us to check current availability, wholesale pricing and order quantities.</p>
-    </div>
-        <div class="product-grid">
-      
-      <!-- 01 / Poovan -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/poovan.jpg" alt="Poovan banana bunch">
-          <span class="number">01 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">பூவன் வாழை</span>
-          <h3>Poovan</h3>
-          <p>A traditional Tamil Nadu variety with compact hands and medium-sized yellow fruits.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Poovan ↗</a>
-        </div>
-      </article>
-
-      <!-- 02 / Sevvazhai -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/sevvazhai.jpg" alt="Sevvazhai red banana bunch">
-          <span class="number">02 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">செவ்வாழை</span>
-          <h3>Sevvazhai</h3>
-          <p>A distinctive red-skinned banana variety popular in parts of Tamil Nadu.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Sevvazhai ↗</a>
-        </div>
-      </article>
-
-      <!-- 03 / Elakki -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/elakki.jpg" alt="Elakki or Elaichi small banana variety">
-          <span class="number">03 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">ஏலக்கி வாழை</span>
-          <h3>Elakki</h3>
-          <p>A small, slender banana variety; contact us to check wholesale availability.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Elakki ↗</a>
-        </div>
-      </article>
-
-      <!-- 04 / Nendran -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/nendran.jpg" alt="Nendran plantain bunch">
-          <span class="number">04 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">நேந்திரம்</span>
-          <h3>Nendran</h3>
-          <p>A long, firm banana used both as a fruit and for cooking or chips.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Nendran ↗</a>
-        </div>
-      </article>
-
-      <!-- 05 / Matti -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/matti.jpg" alt="Matti banana bunch">
-          <span class="number">05 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">மட்டி வாழை</span>
-          <h3>Matti</h3>
-          <p>A traditional southern Tamil Nadu variety; ask about current stock and pricing.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Matti ↗</a>
-        </div>
-      </article>
-
-      <!-- 06 / Rasthali -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/rasthali.jpg" alt="Rasthali banana cultivar">
-          <span class="number">06 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">ரஸ்தாளி</span>
-          <h3>Rasthali</h3>
-          <p>A popular dessert banana known for its pale yellow peel and sweet aroma.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Rasthali ↗</a>
-        </div>
-      </article>
-
-      <!-- 07 / Karpooravalli -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/karpooravalli.jpg" alt="Karpooravalli banana bunch">
-          <span class="number">07 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">கற்பூரவள்ளி</span>
-          <h3>Karpooravalli</h3>
-          <p>A traditional table banana with a distinctive greenish-yellow peel when ripe.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Karpooravalli ↗</a>
-        </div>
-      </article>
-
-      <!-- 08 / Sakkai -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/sakkai.jpg" alt="Sakkai banana bunch">
-          <span class="number">08 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">சக்கை</span>
-          <h3>Sakkai</h3>
-          <p>A dual-purpose Tamil Nadu variety; enquire about current availability.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Sakkai ↗</a>
-        </div>
-      </article>
-
-      <!-- 09 / Monthan -->
-      <article class="product">
-        <div class="product-image">
-          <img loading="lazy" src="./images/monthan.jpg" alt="Monthan green cooking banana bunch">
-          <span class="number">09 / VARIETY</span>
-        </div>
-        <div class="product-body">
-          <span class="tamil">மொந்தன்</span>
-          <h3>Monthan</h3>
-          <p>A green cooking banana variety commonly used in culinary preparations.</p>
-          <a class="btn btn-green" href="https://wa.me." target="_blank" rel="noopener">Enquire about Monthan ↗</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow"><span></span> Your local banana trading partner</div>
+<h2>Fresh banana varieties.<br><em>Wholesale made simple.</em></h2>
+<p class="hero-copy">Looking for banana supply for your shop, fruit stall or business? Connect with Suresh Banana Traders in Cuddalore to ask about available varieties, bulk quantities and current prices.</p>
+<div class="hero-actions">
+<a class="btn btn-green" href="#varieties">Explore varieties <span aria-hidden="true">→</span></a>
+<a class="btn btn-primary" href="https://wa.me/919095613541" data-wa-text="Hello Suresh Banana Traders, I would like to enquire about wholesale banana prices and availability." target="_blank" rel="noopener">WhatsApp for prices</a>
+</div>
+<div class="hero-note">
+<span>✓ Multiple local varieties</span>
+<span>✓ Bulk-order enquiries</span>
+<span>✓ Cuddalore, Tamil Nadu</span>
+</div>
+</div>
+<div class="hero-visual">
+<img class="hero-photo" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=1100&q=85" alt="Fresh bunches of yellow bananas" fetchpriority="high">
+<div class="photo-label"><strong>Need a wholesale quote?</strong><small>Ask us about today's availability and pricing.</small></div>
+</div>
+</div>
 </section>
 
+<div class="trust-strip">
+<div class="wrap trust-grid">
+<div class="trust-item"><div class="trust-icon">🌿</div><div><strong>Variety selection</strong><small>Traditional banana varieties</small></div></div>
+<div class="trust-item"><div class="trust-icon">📦</div><div><strong>Bulk enquiries welcome</strong><small>Share your required quantity</small></div></div>
+<div class="trust-item"><div class="trust-icon">🤝</div><div><strong>Direct communication</strong><small>Speak with the trader</small></div></div>
+</div>
+</div>
 
+<section class="section" id="varieties">
+<div class="wrap">
+<div class="section-heading">
+<div class="eyebrow"><span></span> Our selection</div>
+<h2>Explore our banana varieties</h2>
+<p>Choose a variety and message us to check current availability, wholesale pricing and order quantities.</p>
+</div>
 
+<div class="product-grid">
 
-    <section class="wholesale-band">
-      <div class="wrap wholesale-inner">
-        <div><h2>Buying for a shop or in bulk?</h2><p>Send your preferred variety, estimated quantity and delivery location. We’ll respond with availability and current pricing.</p></div>
-        <a class="btn btn-primary" href="https://wa.me/919095613541?text=Hello%20Suresh%20Banana%20Traders%2C%20I%20am%20looking%20for%20a%20wholesale%20banana%20quote." target="_blank" rel="noopener">Get a wholesale quote ↗</a>
-      </div>
-    </section>
+<!-- 01 / Poovan -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/poovan.jpg" alt="Poovan banana bunch">
+<span class="number">01 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">பூவன் வாழை</span>
+<h3>Poovan</h3>
+<p>A traditional Tamil Nadu variety with compact hands and medium-sized yellow fruits.</p>
+<a class="btn btn-green enquire-btn" data-variety="Poovan" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Poovan ↗</a>
+</div>
+</article>
 
-    <section class="section" id="how-to-order">
-      <div class="wrap">
-        <div class="section-heading">
-          <div class="eyebrow"><span></span> Simple process</div>
-          <h2>How to place an enquiry</h2>
-          <p>Share a few details so we can help you check the right product and quantity.</p>
-        </div>
-        <div class="steps">
-          <article class="step"><div class="step-num">01</div><h3>Choose a variety</h3><p>Browse the list and select the banana variety that suits your customers or business.</p></article>
-          <article class="step"><div class="step-num">02</div><h3>Tell us your quantity</h3><p>Message us with the approximate number of bunches, kilograms or other required quantity.</p></article>
-          <article class="step"><div class="step-num">03</div><h3>Confirm price and delivery</h3><p>Ask about current availability, pricing, pickup or delivery options before placing your order.</p></article>
-        </div>
-      </div>
-    </section>
+<!-- 02 / Sevvazhai -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/sevvazhai.jpg" alt="Sevvazhai red banana bunch">
+<span class="number">02 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">செவ்வாழை</span>
+<h3>Sevvazhai</h3>
+<p>A distinctive red-skinned banana variety popular in parts of Tamil Nadu.</p>
+<a class="btn btn-green enquire-btn" data-variety="Sevvazhai" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Sevvazhai ↗</a>
+</div>
+</article>
 
-    <section class="section contact-section" id="contact">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <div class="eyebrow"><span></span> Let's talk business</div>
-          <h2>Request today's wholesale price</h2>
-          <p>For current rates and availability, contact Suresh Banana Traders directly. Share your requirements and we’ll help you with the next steps.</p>
-          <div class="contact-list">
-            <div class="contact-row"><div class="ico">👤</div><div><strong>Proprietor</strong><span>SureshKumar D</span></div></div>
-            <div class="contact-row"><div class="ico">📞</div><div><strong>Phone / WhatsApp</strong><a href="tel:+919095613541">+91 90956 13541</a></div></div>
-            <div class="contact-row"><div class="ico">✉️</div><div><strong>Email</strong><a href="mailto:sureshbananatraders@gmail.com">sureshbananatraders@gmail.com</a></div></div>
-            <div class="contact-row"><div class="ico">📍</div><div><strong>Location</strong><span>Cuddalore District, Tamil Nadu, India</span></div></div>
-          </div>
-        </div>
-        <form class="form-card" id="enquiry-form">
-          <h3>Send a quick enquiry</h3>
-          <p>Submit this form to open a pre-filled WhatsApp message. No details are stored on this website.</p>
-          <div class="form-grid">
-            <div class="field"><label for="customer-name">Your name *</label><input id="customer-name" name="name" autocomplete="name" placeholder="Enter your name" required></div>
-            <div class="field"><label for="customer-phone">Phone number</label><input id="customer-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="Your contact number"></div>
-            <div class="field"><label for="customer-variety">Banana variety *</label><select id="customer-variety" name="variety" required><option value="">Choose a variety</option><option>Poovan</option><option>Sevvazhai</option><option>Elakki</option><option>Nendhiram</option><option>Nattukai</option><option>Rasthali</option><option>Thenvaazhai</option><option>Sakkai</option><option>Kaaivazhai</option><option>Multiple varieties</option></select></div>
-            <div class="field"><label for="customer-quantity">Required quantity</label><input id="customer-quantity" name="quantity" placeholder="e.g. 50 bunches / 100 kg"></div>
-            <div class="field full"><label for="customer-location">Delivery / pickup location</label><input id="customer-location" name="location" placeholder="Town or area"></div>
-            <div class="field full"><label for="customer-message">Additional details</label><textarea id="customer-message" name="message" placeholder="Tell us your requirements"></textarea></div>
-          </div>
-          <button class="btn btn-green" type="submit">Send enquiry on WhatsApp ↗</button>
-          <div class="form-note">Current prices and availability must be confirmed directly with the trader.</div>
-        </form>
-      </div>
-    </section>
-  </main>
+<!-- 03 / Elakki -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/elakki.jpg" alt="Elakki or Elaichi small banana variety">
+<span class="number">03 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">ஏலக்கி வாழை</span>
+<h3>Elakki</h3>
+<p>A small, slender banana variety; contact us to check wholesale availability.</p>
+<a class="btn btn-green enquire-btn" data-variety="Elakki" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Elakki ↗</a>
+</div>
+</article>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <div><strong>Suresh Banana Traders</strong> · Cuddalore, Tamil Nadu</div>
-      <div>© <span id="year"></span> Suresh Banana Traders. All rights reserved.</div>
-    </div>
-  </footer>
+<!-- 04 / Nendran -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/nendran.jpg" alt="Nendran plantain bunch">
+<span class="number">04 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">நேந்திரம்</span>
+<h3>Nendran</h3>
+<p>A long, firm banana used both as a fruit and for cooking or chips.</p>
+<a class="btn btn-green enquire-btn" data-variety="Nendran" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Nendran ↗</a>
+</div>
+</article>
 
-  <a class="btn btn-green float-wa" href="https://wa.me/919095613541?text=Hello%20Suresh%20Banana%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20wholesale%20bananas." target="_blank" rel="noopener" aria-label="Chat with Suresh Banana Traders on WhatsApp">◉ WhatsApp</a>
+<!-- 05 / Matti -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/matti.jpg" alt="Matti banana bunch">
+<span class="number">05 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">மட்டி வாழை</span>
+<h3>Matti</h3>
+<p>A traditional southern Tamil Nadu variety; ask about current stock and pricing.</p>
+<a class="btn btn-green enquire-btn" data-variety="Matti" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Matti ↗</a>
+</div>
+</article>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('enquiry-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const name = document.getElementById('customer-name').value.trim();
-      const phone = document.getElementById('customer-phone').value.trim();
-      const variety = document.getElementById('customer-variety').value;
-      const quantity = document.getElementById('customer-quantity').value.trim();
-      const location = document.getElementById('customer-location').value.trim();
-      const message = document.getElementById('customer-message').value.trim();
-      const lines = [
-        'Hello Suresh Banana Traders,',
-        '',
-        'I would like to enquire about a wholesale banana order.',
-        'Name: ' + name,
-        phone ? 'Phone: ' + phone : '',
-        'Variety: ' + variety,
-        quantity ? 'Required quantity: ' + quantity : '',
-        location ? 'Delivery / pickup location: ' + location : '',
-        message ? 'Additional details: ' + message : '',
-        '',
-        'Please share current availability and pricing. Thank you.'
-      ].filter(Boolean);
-      const url = 'https://wa.me/919095613541?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener,noreferrer');
-    });
-  </script>
+<!-- 06 / Rasthali -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/rasthali.jpg" alt="Rasthali banana cultivar">
+<span class="number">06 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">ரஸ்தாளி</span>
+<h3>Rasthali</h3>
+<p>A popular dessert banana known for its pale yellow peel and sweet aroma.</p>
+<a class="btn btn-green enquire-btn" data-variety="Rasthali" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Rasthali ↗</a>
+</div>
+</article>
+
+<!-- 07 / Karpooravalli -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/karpooravalli.jpg" alt="Karpooravalli banana bunch">
+<span class="number">07 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">கற்பூரவள்ளி</span>
+<h3>Karpooravalli</h3>
+<p>A traditional table banana with a distinctive greenish-yellow peel when ripe.</p>
+<a class="btn btn-green enquire-btn" data-variety="Karpooravalli" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Karpooravalli ↗</a>
+</div>
+</article>
+
+<!-- 08 / Sakkai -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/sakkai.jpg" alt="Sakkai banana bunch">
+<span class="number">08 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">சக்கை</span>
+<h3>Sakkai</h3>
+<p>A dual-purpose Tamil Nadu variety; enquire about current availability.</p>
+<a class="btn btn-green enquire-btn" data-variety="Sakkai" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Sakkai ↗</a>
+</div>
+</article>
+
+<!-- 09 / Monthan -->
+<article class="product">
+<div class="product-image">
+<img loading="lazy" src="./images/monthan.jpg" alt="Monthan green cooking banana bunch">
+<span class="number">09 / VARIETY</span>
+</div>
+<div class="product-body">
+<span class="tamil">மொந்தன்</span>
+<h3>Monthan</h3>
+<p>A green cooking banana variety commonly used in culinary preparations.</p>
+<a class="btn btn-green enquire-btn" data-variety="Monthan" href="https://wa.me/919095613541" target="_blank" rel="noopener">Enquire about Monthan ↗</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="wholesale-band">
+<div class="wrap wholesale-inner">
+<div><h2>Buying for a shop or in bulk?</h2><p>Send your preferred variety, estimated quantity and delivery location. We’ll respond with availability and current pricing.</p></div>
+<a class="btn btn-primary" href="https://wa.me/919095613541" data-wa-text="Hello Suresh Banana Traders, I am looking for a wholesale banana quote." target="_blank" rel="noopener">Get a wholesale quote ↗</a>
+</div>
+</section>
+
+<section class="section" id="how-to-order">
+<div class="wrap">
+<div class="section-heading">
+<div class="eyebrow"><span></span> Simple process</div>
+<h2>How to place an enquiry</h2>
+<p>Share a few details so we can help you check the right product and quantity.</p>
+</div>
+<div class="steps">
+<article class="step"><div class="step-num">01</div><h3>Choose a variety</h3><p>Browse the list and select the banana variety that suits your customers or business.</p></article>
+<article class="step"><div class="step-num">02</div><h3>Tell us your quantity</h3><p>Message us with the approximate number of bunches, kilograms or other required quantity.</p></article>
+<article class="step"><div class="step-num">03</div><h3>Confirm price and delivery</h3><p>Ask about current availability, pricing, pickup or delivery options before placing your order.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section contact-section" id="contact">
+<div class="wrap contact-grid">
+<div class="contact-copy">
+<div class="eyebrow"><span></span> Let's talk business</div>
+<h2>Request today's wholesale price</h2>
+<p>For current rates and availability, contact Suresh Banana Traders directly. Share your requirements and we’ll help you with the next steps.</p>
+<div class="contact-list">
+<div class="contact-row"><div class="ico">👤</div><div><strong>Proprietor</strong><span>SureshKumar D</span></div></div>
+<div class="contact-row"><div class="ico">📞</div><div><strong>Phone / WhatsApp</strong><a href="tel:+919095613541">+91 90956 13541</a></div></div>
+<div class="contact-row"><div class="ico">✉️</div><div><strong>Email</strong><a href="mailto:sureshbananatraders@gmail.com">sureshbananatraders@gmail.com</a></div></div>
+<div class="contact-row"><div class="ico">📍</div><div><strong>Location</strong><span>Cuddalore District, Tamil Nadu, India</span></div></div>
+</div>
+</div>
+
+<form class="form-card" id="enquiry-form">
+<h3>Send a quick enquiry</h3>
+<p>Submit this form to open a pre-filled WhatsApp message. No details are stored on this website.</p>
+<div class="form-grid">
+<div class="field"><label for="customer-name">Your name *</label><input id="customer-name" name="name" autocomplete="name" placeholder="Enter your name" required></div>
+<div class="field"><label for="customer-phone">Phone number</label><input id="customer-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="Your contact number"></div>
+<div class="field"><label for="customer-variety">Banana variety *</label><select id="customer-variety" name="variety" required><option value="">Choose a variety</option><option>Poovan</option><option>Sevvazhai</option><option>Elakki</option><option>Nendran</option><option>Matti</option><option>Rasthali</option><option>Karpooravalli</option><option>Sakkai</option><option>Monthan</option><option>Multiple varieties</option></select></div>
+<div class="field"><label for="customer-quantity">Required quantity</label><input id="customer-quantity" name="quantity" placeholder="e.g. 50 bunches / 100 kg"></div>
+<div class="field full"><label for="customer-location">Delivery / pickup location</label><input id="customer-location" name="location" placeholder="Town or area"></div>
+<div class="field full"><label for="customer-message">Additional details</label><textarea id="customer-message" name="message" placeholder="Tell us your requirements"></textarea></div>
+</div>
+<button class="btn btn-green" type="submit">Send enquiry on WhatsApp ↗</button>
+<div class="form-note">Current prices and availability must be confirmed directly with the trader.</div>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap footer-inner">
+<div><strong>Suresh Banana Traders</strong> · Cuddalore, Tamil Nadu</div>
+<div>© <span id="year"></span> Suresh Banana Traders. All rights reserved.</div>
+</div>
+</footer>
+
+<a class="btn btn-green float-wa" href="https://wa.me/919095613541" data-wa-text="Hello Suresh Banana Traders, I would like to enquire about wholesale bananas." target="_blank" rel="noopener" aria-label="Chat with Suresh Banana Traders on WhatsApp">◉ WhatsApp</a>
+
+<script>
+// ============================================================
+// Change the WhatsApp number ONLY here (country code + number,
+// digits only, no + or spaces). Every button uses this value.
+// ============================================================
+const WHATSAPP_NUMBER = '919095613541';
+
+function waLink(text) {
+  return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Variety enquiry buttons: each opens WhatsApp with its own variety in the message
+document.querySelectorAll('.enquire-btn').forEach(function (btn) {
+  const variety = btn.dataset.variety;
+  btn.href = waLink(
+    'Hello Suresh Banana Traders,\n\nI would like to enquire about ' + variety +
+    ' bananas. Please share current availability and wholesale pricing. Thank you.'
+  );
+});
+
+// General WhatsApp buttons (hero, wholesale band, floating button)
+document.querySelectorAll('[data-wa-text]').forEach(function (btn) {
+  btn.href = waLink(btn.dataset.waText);
+});
+
+// Enquiry form
+document.getElementById('enquiry-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById('customer-name').value.trim();
+  const phone = document.getElementById('customer-phone').value.trim();
+  const variety = document.getElementById('customer-variety').value;
+  const quantity = document.getElementById('customer-quantity').value.trim();
+  const location = document.getElementById('customer-location').value.trim();
+  const message = document.getElementById('customer-message').value.trim();
+
+  const lines = [
+    'Hello Suresh Banana Traders,',
+    '',
+    'I would like to enquire about a wholesale banana order.',
+    'Name: ' + name,
+    phone ? 'Phone: ' + phone : '',
+    'Variety: ' + variety,
+    quantity ? 'Required quantity: ' + quantity : '',
+    location ? 'Delivery / pickup location: ' + location : '',
+    message ? 'Additional details: ' + message : '',
+    '',
+    'Please share current availability and pricing. Thank you.'
+  ].filter(Boolean);
+
+  window.open(waLink(lines.join('\n')), '_blank', 'noopener,noreferrer');
+});
+</script>
+
 </body>
 </html>
